@@ -29,7 +29,7 @@
             <Label Content="Nom Fromage" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>
             <TextBox x:Name="nomFromage" Text="{Binding Name}" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"/>
             <Label Content="Origine" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>
-            <ComboBox x:Name="listOrigin" ItemsSource="{Binding ListPays}" SelectedItem="{Binding Origin}" IsSynchronizedWithCurrentItem="True" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"/>
+            <ComboBox x:Name="listOrigin" ItemsSource="{Binding ListPays, Mode=OneTime}" SelectedItem="{Binding Origin}" IsSynchronizedWithCurrentItem="True" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"/>
             <Label Content="Date de création" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>
             <DatePicker x:Name="dateCreation" SelectedDate="{Binding Creation}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10"/>
             <Label Content="Image du fromage" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>

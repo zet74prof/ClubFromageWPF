@@ -16,7 +16,7 @@ namespace WpfClubFromage.viewModel
         private ObservableCollection<Pays> listPays;
         private ObservableCollection<Fromage> listFromages;
 
-        private Fromage selectedFromage;
+        private Fromage selectedFromage = new Fromage();
         private Fromage toUpdateFromage = new Fromage();
         private Fromage activeFromage = new Fromage();
 
@@ -43,9 +43,6 @@ namespace WpfClubFromage.viewModel
                 {
                     selectedFromage = value;
                     OnPropertyChanged("SelectedFromage");
-                    OnPropertyChanged("Name");
-                    OnPropertyChanged("Origin");
-                    OnPropertyChanged("Creation");
 
                     if (SelectedFromage != null)
                         ActiveFromage = SelectedFromage;
@@ -96,7 +93,15 @@ namespace WpfClubFromage.viewModel
 
         public Pays Origin
         {
-            get => ActiveFromage.Origin;
+            get
+            {
+                if (ActiveFromage != null)
+                {
+                    return SelectedFromage.Origin;
+                }
+                else
+                    return null;               
+            }
             set
             {
                 if (ActiveFromage.Origin != value)
