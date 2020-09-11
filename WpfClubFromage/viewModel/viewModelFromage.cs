@@ -26,14 +26,8 @@ namespace WpfClubFromage.viewModel
         private DaoFromage vmDaoFromage;
 
         public ObservableCollection<Pays> ListPays { get => listPays; set => listPays = value; }
-        public ObservableCollection<Fromage> ListFromages 
-        { 
-            get => listFromages;
-            set
-            {
-                listFromages = value;               
-            }
-        }
+        public ObservableCollection<Fromage> ListFromages { get => listFromages; set => listFromages = value; }
+        
         public Fromage SelectedFromage 
         { 
             get => selectedFromage;
@@ -57,9 +51,6 @@ namespace WpfClubFromage.viewModel
             set
             {
                 toUpdateFromage = value;
-                //OnPropertyChanged("ToUpdateFromage");
-                //OnPropertyChanged("Name");
-                //OnPropertyChanged("Creation");
             }
         }
 
@@ -146,6 +137,14 @@ namespace WpfClubFromage.viewModel
 
             listPays = new ObservableCollection<Pays>(thedaopays.SelectAll());
             listFromages = new ObservableCollection<Fromage>(thedaofromage.SelectAll());
+
+            //je relie (ou connecte) les deux listes entre elles, comme ça quand je sélectione un fromage, le pays est mis à jour dans la combobox
+            foreach (Fromage thef in ListFromages)
+            {
+                int i = 0;
+                while (thef.Origin.Name != listPays[i].Name) i++;
+                thef.Origin = listPays[i];
+            }
 
         }
 
