@@ -60,7 +60,7 @@ namespace ModelLayer.Data
         public void Update(Fromage myFromage)
         {
             string query = "fromage SET id = " + myFromage.Id
-                + ", name = '" + myFromage.Name
+                + ", name = '" + myFromage.Name.Replace("'","''")
                 + "', pays_origine_id = " + myFromage.Origin.Id
                 + ", creation = '" + myFromage.Creation.ToString("yyyy-MM-dd")
                 + "', image = '" + myFromage.Image + "' " 

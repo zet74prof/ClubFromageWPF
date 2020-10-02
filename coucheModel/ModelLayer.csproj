@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Fromage.cs" />
+    <Compile Include="Business\Membre.cs" />
     <Compile Include="Business\Pays.cs" />
     <Compile Include="Data\DaoFromage.cs" />
     <Compile Include="Data\DaoPays.cs" />
