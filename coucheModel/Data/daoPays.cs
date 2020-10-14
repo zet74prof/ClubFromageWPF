@@ -34,7 +34,7 @@ namespace ModelLayer.Data
                 csv.Configuration.PrepareHeaderForMatch = (string header, int index) => header.ToLower();
 
                 var record = new Pays();
-                IEnumerable<Pays> records = csv.EnumerateRecords(record);
+                var records = csv.EnumerateRecords(record);
 
                 foreach (Pays r in records)
                 {

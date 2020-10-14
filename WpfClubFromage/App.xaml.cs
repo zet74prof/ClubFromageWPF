@@ -27,8 +27,10 @@ namespace WpfClubFromage
             thedaofromage = new DaoFromage(thedbal, thedaopays);
 
             // Create the startup window
-            MainWindow wnd = new MainWindow(thedaopays, thedaofromage);
+            Home wnd = new Home(thedaopays, thedaofromage);
+            //MainWindow wnd = new MainWindow(thedaopays, thedaofromage);
             wnd.Show();
+            
         }
 
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)

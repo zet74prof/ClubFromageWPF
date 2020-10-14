@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,32 +11,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using ModelLayer.Business;
 using ModelLayer.Data;
 
 namespace WpfClubFromage
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class GestionFromages : Window
     {
-        DaoPays homeDaoPays;
-        DaoFromage homeDaoFromage;
-
-        public Home(DaoPays thedaopays, DaoFromage thedaofromage)
+        
+        public GestionFromages(DaoPays thedaopays, DaoFromage thedaofromage)
         {
             InitializeComponent();
-            homeDaoPays = thedaopays;
-            homeDaoFromage = thedaofromage;
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            GestionFromages wnd = new GestionFromages(homeDaoPays, homeDaoFromage);
-            wnd.Show();
+            mainGrid.DataContext = new viewModel.viewModelFromage(thedaopays, thedaofromage);            
+            
         }
     }
 }

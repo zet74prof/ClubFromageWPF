@@ -42,11 +42,13 @@ namespace ClubFromage
             {
                 Console.WriteLine(p.Name);
             }
-            string fromton = "Angors";
+            string fromton = "Abondance";
             Fromage myFromage = myDaoFromage.SelectByName(fromton);
-            myFromage.Name = "Reblochon";
-            myDaoFromage.Update(myFromage);
+            //myFromage.Name = "Reblochon";
+            //myDaoFromage.Update(myFromage);
             Console.WriteLine("L'ID du " + fromton + ": " + myFromage.Id);
+
+
         }
 
     }
