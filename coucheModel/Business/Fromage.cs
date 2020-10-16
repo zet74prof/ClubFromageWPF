@@ -30,6 +30,8 @@ namespace ModelLayer.Business
             Image = image;
         }
 
+        public Fromage() { }
+
         public override string ToString()
         {
             return this.Name + "----->" + this.Origin.Name;

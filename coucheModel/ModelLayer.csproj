@@ -107,6 +107,8 @@
     <Compile Include="Data\DaoFromage.cs" />
     <Compile Include="Data\DaoPays.cs" />
     <Compile Include="Data\Dbal.cs" />
+    <Compile Include="Data\FromageMap.cs" />
+    <Compile Include="Data\PaysConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

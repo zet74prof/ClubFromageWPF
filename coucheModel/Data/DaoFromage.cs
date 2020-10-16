@@ -97,31 +97,5 @@ namespace ModelLayer.Data
             return new Fromage((int)tableFromage.Rows[0]["id"], (string)tableFromage.Rows[0]["name"], (DateTime)tableFromage.Rows[0]["creation"], myPays, (string)tableFromage.Rows[0]["image"]);
         }
     }
-
-    //classes for CSV conversion only
-    public class FromageConverter : DefaultTypeConverter
-    {
-        public override object ConvertFromString(string text, IReaderRow row, MemberMapData memberMapData)
-        {
-            Dbal mydbal = new Dbal("dbclubfromage");
-            Pays convertedPays = new Pays();
-            DaoPays myDaoPays = new DaoPays(mydbal);
-            convertedPays = myDaoPays.SelectByName(text);
-            return convertedPays;
-        }
-    }
-
-    public class FromageMap : ClassMap<Fromage>
-    {
-        public FromageMap()
-        {
-            Map(m => m.Id);
-            Map(m => m.Name);
-            Map(m => m.Origin).TypeConverter<FromageConverter>();
-            Map(m => m.Creation);
-            Map(m => m.Image);
-        }
-    }
-
 }
 
