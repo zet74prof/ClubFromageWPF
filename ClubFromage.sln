@@ -17,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTutorial", "WpfTutorial\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClubFromage", "WpfClubFromage\WpfClubFromage.csproj", "{196C164D-87DE-4590-8430-F26A926DF9C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{548173B5-87D1-4FFE-923C-FBA936686174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{548173B5-87D1-4FFE-923C-FBA936686174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClubFromageBase", "WpfClubFromageBase\WpfClubFromageBase.csproj", "{39DD67B0-9333-4BCE-9DC8-A2623492DCCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{548173B5-87D1-4FFE-923C-FBA936686174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{548173B5-87D1-4FFE-923C-FBA936686174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{548173B5-87D1-4FFE-923C-FBA936686174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39DD67B0-9333-4BCE-9DC8-A2623492DCCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DD67B0-9333-4BCE-9DC8-A2623492DCCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DD67B0-9333-4BCE-9DC8-A2623492DCCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DD67B0-9333-4BCE-9DC8-A2623492DCCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

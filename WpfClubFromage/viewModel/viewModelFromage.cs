@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using ModelLayer.Business;
 using ModelLayer.Data;
-using WpfClubFromageVM.viewModel;
 
 namespace WpfClubFromage.viewModel
 {
