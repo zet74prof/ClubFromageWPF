@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
 using Google.Protobuf.WellKnownTypes;
+using System.Configuration;
 
 namespace ModelLayer.Data
 {
@@ -15,7 +16,7 @@ namespace ModelLayer.Data
 
 
         //Constructor
-        public Dbal(string database, string uid = "zetroot", string password = "mySEvca68581", string server = "localhost")
+        public Dbal(string database, string uid = "root", string password = "5MichelAnnecy", string server = "localhost")
         {
             Initialize(database, uid, password, server);
         }
@@ -26,6 +27,7 @@ namespace ModelLayer.Data
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            //connectionString = ConfigurationManager.ConnectionStrings["clubfromagedb"].ConnectionString; 
 
             connection = new MySqlConnection(connectionString);
         }
@@ -79,9 +81,9 @@ namespace ModelLayer.Data
         }
 
         //Insert statement
-        public void Insert(string query)
+        public void Insert(string queryPart)
         {
-            query = "INSERT INTO " + query; // tablename (field1, field2) VALUES('value 1', 'value 2')";
+            string query = "INSERT INTO " + queryPart; // tablename (field1, field2) VALUES('value 1', 'value 2')";
             CUDQuery(query);
 
         }

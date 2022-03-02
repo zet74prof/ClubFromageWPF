@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{329191
 		coucheModel\tableauNomDep.csv = coucheModel\tableauNomDep.csv
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTutorial", "WpfTutorial\WpfTutorial.csproj", "{F0AD3C89-5687-4A87-AF20-C5363B69209D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClubFromage", "WpfClubFromage\WpfClubFromage.csproj", "{196C164D-87DE-4590-8430-F26A926DF9C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{548173B5-87D1-4FFE-923C-FBA936686174}"
@@ -35,10 +33,6 @@ Global
 		{C29EF4C0-9609-4295-A9E9-F3E3B4312410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C29EF4C0-9609-4295-A9E9-F3E3B4312410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C29EF4C0-9609-4295-A9E9-F3E3B4312410}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0AD3C89-5687-4A87-AF20-C5363B69209D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0AD3C89-5687-4A87-AF20-C5363B69209D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0AD3C89-5687-4A87-AF20-C5363B69209D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0AD3C89-5687-4A87-AF20-C5363B69209D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{196C164D-87DE-4590-8430-F26A926DF9C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{196C164D-87DE-4590-8430-F26A926DF9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{196C164D-87DE-4590-8430-F26A926DF9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU

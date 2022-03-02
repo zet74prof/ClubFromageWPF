@@ -22,7 +22,7 @@ namespace WpfClubFromage
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            thedbal = new Dbal("dbclubfromage");
+            thedbal = new Dbal("clubfromage");
             thedaopays = new DaoPays(thedbal);
             thedaofromage = new DaoFromage(thedbal, thedaopays);
 
